@@ -16,5 +16,6 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.29.0"
-  }
+  },
+  "gitHead": "2302916041c1ba32c80ce299439885e6c94d95fa"
 }
