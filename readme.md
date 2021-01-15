@@ -15,11 +15,11 @@ You can also install a standalone package for different part. These are availabl
 
 | Package Name | Description | 
 | ------------ | ----------- | 
-| [`@scania-sdds/components`](./components) | Scania reusable web components built with StencilJS |
-| [`@scania-sdds/theme-light`](./theme/light) | Scania default theming |
-| [`@scania-sdds/typography`](./theme/light/src/styles/core/typography) | Scania official typography styling package |
-| [`@scania-sdds/colour`](./theme/light/src/styles/core/colour) | Scania official colour scale package |
-| [`@scania-sdds/grid`](./theme/light/src/styles/core/grid) | Scania official grid package |
+| [`@s-ds/components`](./components) | Scania reusable web components built with StencilJS |
+| [`@s-ds/theme-light`](./theme/light) | Scania default theming |
+| [`@s-ds/typography`](./theme/light/src/styles/core/typography) | Scania official typography styling package |
+| [`@s-ds/colour`](./theme/light/src/styles/core/colour) | Scania official colour scale package |
+| [`@s-ds/grid`](./theme/light/src/styles/core/grid) | Scania official grid package |
 
 ## Demo
 

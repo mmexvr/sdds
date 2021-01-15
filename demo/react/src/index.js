@@ -19,8 +19,8 @@ import Info from './scenes/Info/Info';
 
 import * as serviceWorker from './serviceWorker';
 
-import { addTheme, defineCustomElements } from '@scania-sdds/components'
-import { theme as scania } from '@scania-sdds/theme-light';
+import { addTheme, defineCustomElements } from '@s-ds/components'
+import { theme as scania } from '@s-ds/theme-light';
 
 defineCustomElements();
 addTheme(scania);

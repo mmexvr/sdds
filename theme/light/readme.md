@@ -1,10 +1,10 @@
-[![npm version](http://img.shields.io/npm/v/scania-theme.svg?style=flat&color=1081C2)](https://npmjs.org/package/@scania-sdds/theme-light)
+[![npm version](http://img.shields.io/npm/v/scania-theme.svg?style=flat&color=1081C2)](https://npmjs.org/package/@s-ds/theme-light)
 [![Github release](https://img.shields.io/github/v/tag/scania/scania-theme.svg?label=release&color=1081C2)](https://github.com/scania-digital-design-system/sdds/releases)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/scania-digital-design-system/sdds/Node%20CI)
 
 # Scania Theme
 
-# @scania-sdds/theme-light
+# @s-ds/theme-light
 
 Scania theme is a package to style Scania looks and feel in the [Scania Digital Design System setup](https://github.com/scania-digital-design-system/sdds/).
 
@@ -17,14 +17,14 @@ Scania theme is a package to style Scania looks and feel in the [Scania Digital 
 Install package by running the command below.
  
 ```shell
-npm i @scania-sdds/theme-light -D
+npm i @s-ds/theme-light -D
 ```
 
 Import theme in the project and use it with addTheme function from corporate-ui.
 
 ```js
-import { defineCustomElements, addTheme } from '@scania-sdds/components'; 
-import { theme as scania } from '@scania-sdds/theme-light'; 
+import { defineCustomElements, addTheme } from '@s-ds/components'; 
+import { theme as scania } from '@s-ds/theme-light'; 
  
 defineCustomElements(); 
 addTheme(scania);
@@ -39,11 +39,11 @@ addTheme(scania);
 Add link to the script by adding the following to the head element. Make sure to include scania-theme script BEFORE the corporate-ui script.
  
 ```html
-<script src="https://digitaldesign.scania.com/builds/@scania-sdds/theme-light/x/scania-theme.js"></script>
-<script src="https://digitaldesign.scania.com/builds/@scania-sdds/components/x/core.js"></script>
+<script src="https://digitaldesign.scania.com/builds/@s-ds/theme-light/x/scania-theme.js"></script>
+<script src="https://digitaldesign.scania.com/builds/@s-ds/components/x/core.js"></script>
 ```
 
-Replace `x` with [available releases](https://www.npmjs.com/@scania-sdds/theme-light).
+Replace `x` with [available releases](https://www.npmjs.com/@s-ds/theme-light).
 
 </details>
 

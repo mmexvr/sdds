@@ -31,8 +31,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@scania-sdds/components": "^1.0.0-beta.0",
-    "@scania-sdds/theme-light": "^1.1.0-beta.0",
+    "@s-ds/components": "^1.0.0-beta.0",
+    "@s-ds/theme-light": "^1.1.0-beta.0",
     "babel-polyfill": "6.26.0"
   }
 }
