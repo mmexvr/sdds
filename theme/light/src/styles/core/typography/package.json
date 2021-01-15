@@ -1,6 +1,6 @@
 {
   "name": "@s-ds/typography",
-  "version": "1.0.3-alpha.1",
+  "version": "1.0.3",
   "description": "Scania Digital Design System Typography",
   "scripts": {
     "build": "node compile.js"
