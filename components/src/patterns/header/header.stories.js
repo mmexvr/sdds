@@ -13,14 +13,13 @@ export default {
   },
 };
 
-const BasicTemplate = ({ siteName }) => {
-  return `<sdds-theme></sdds-theme>
+const BasicTemplate = ({ siteName }) => `
+  <sdds-theme></sdds-theme>
 
   <nav class="sdds-navbar">
     <div class="sdds-navbar-application-brand">${siteName}</div>
     <div class="sdds-navbar-scania-brand"></div>
   </nav>`;
-};
 
 export const Basic = BasicTemplate.bind({});
 Basic.args = {

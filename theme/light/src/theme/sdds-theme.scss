@@ -41,9 +41,8 @@
 @import '../components/slider';
 @import '../components/spinner';
 @import '../components/badges';
-// Patterns
 
-@import '../patterns/header';
+// Patterns
 @import '../patterns/side-menu.scss';
 @import '../patterns/footer';
 
@@ -55,15 +54,18 @@ html {
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   display: flex;
   flex-direction: column;
   visibility: visible;
 }
+
 html {
   height: 100%;
 }
+
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
