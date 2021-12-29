@@ -57,7 +57,7 @@ const Template = ({
         <ul class='sdds-nav__inline-menu'>
         
           <li class='sdds-nav__item'>
-            <a class='sdds-nav__link sdds-nav__link--active' href='#'> 
+            <a class='sdds-nav__link' href='#'> 
               <span class='sdds-nav__link-icon'>
                   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
               </span>
@@ -65,8 +65,8 @@ const Template = ({
             </a>
           </li> 
           
-          <li class='sdds-nav__item'>
-            <a class='sdds-nav__link' href='#'>Item 2</a>
+          <li class='sdds-nav__item sdds-nav__item--active'>
+            <a class='sdds-nav__link ' href='#'>Item 2</a>
           </li>
           
           <li class='sdds-nav__item sdds-nav__dropdown sdds-nav__dropdown--opened'>  
@@ -81,12 +81,7 @@ const Template = ({
                 <li class='sdds-nav__dropdown-item'><a class='sdds-nav__dropdown-link sdds-nav__dropdown-link--active' href='#'>Sub item 3</a></li>
                 <li class='sdds-nav__dropdown-item'><a class='sdds-nav__dropdown-link' href='#'>Sub item 3 long label...</a></li>
               </ul>
-          </li>
-          
-           <li class='sdds-nav__item'>
-            <a class='sdds-nav__link' href='#'> Item 4 </a>
-          </li>
-                    
+          </li>                    
         </ul>        
     </div
 
