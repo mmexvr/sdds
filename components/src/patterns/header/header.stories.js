@@ -80,8 +80,8 @@ const Template = ({
               </button>   
               <ul class='sdds-nav__dropdown-menu'>
                 <li class='sdds-nav__dropdown-item'><a class='sdds-nav__dropdown-link' href='#'>Sub item 3 long label...</a></li>
-                <li class='sdds-nav__dropdown-item'><a class='sdds-nav__dropdown-link sdds-nav__dropdown-link--active' href='#'>Sub item 3</a></li>
-                <li class='sdds-nav__dropdown-item'><a class='sdds-nav__dropdown-link' href='#'>Sub item 3 long label...</a></li>
+                <li class='sdds-nav__dropdown-item'><a class='sdds-nav__dropdown-link' href='#'>Sub item 3</a></li>
+                <li class='sdds-nav__dropdown-item sdds-nav__dropdown-item--active'><a class='sdds-nav__dropdown-link' href='#'>Sub item 3 long label...</a></li>
               </ul>
           </li>                    
         </ul>        
@@ -111,7 +111,7 @@ const Template = ({
         </button>    
         <ul class='sdds-nav__app-launcher-menu'>
           <li class='sdds-nav__app-launcher-item sdds-nav__app-launcher-item--category'>
-             <p class='sdds-nav__app-launcher-category-title'>Category name</p>
+             <p class='sdds-nav__app-launcher-category-title'>Category 1</p>
           </li>
           <li class='sdds-nav__app-launcher-item'>
              <a href='' class='sdds-nav__app-launcher-link'>Application 1</a>
@@ -119,7 +119,7 @@ const Template = ({
           <li class='sdds-nav__app-launcher-item'>
              <a href='' class='sdds-nav__app-launcher-link'>Application 2</a>
           </li>
-          <li class='sdds-nav__app-launcher-item'>
+          <li class='sdds-nav__app-launcher-item sdds-nav__app-launcher-item--active'>
              <a href='' class='sdds-nav__app-launcher-link'>Application 3</a>
           </li>
           <li class='sdds-nav__app-launcher-item'>
