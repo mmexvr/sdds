@@ -232,6 +232,8 @@ html {
   height: 100%;
   width: 64px;
   border: none;
+  color: var(--sdds-white);
+  transition: color 150ms ease;
 
   &:hover {
     text-decoration: none;
@@ -240,7 +242,7 @@ html {
   svg {
     width: 20px;
     height: auto;
-    fill: var(--sdds-white);
+    transition: fill 150ms ease;
   }
 }
 
@@ -260,8 +262,29 @@ html {
 
 .sdds-nav__app-launcher-menu {
   list-style-type: none;
+  background-color: var(--sdds-white);
   position: absolute;
   right: 0;
+  height: calc(100% - 64px);
+  // Check padding with the team
+  // Also speak about hierarchy category name vs. list under it
+  padding-bottom: 32px;
+  overflow-y: scroll;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 150ms ease;
+}
+
+.sdds-nav__app-launcher--opened {
+  .sdds-nav__app-launcher-btn {
+    background-color: var(--sdds-white);
+    color: var(--sdds-black);
+    //maybe it should be blue-985? Check with designers
+  }
+
+  .sdds-nav__app-launcher-menu {
+    transform: scaleY(1);
+  }
 }
 
 .sdds-nav__app-launcher-item {
@@ -284,12 +307,6 @@ html {
   padding: 0 16px;
   background-color: var(--sdds-white);
   color: var(--sdds-grey-500);
-  transition: background-color 150ms ease;
-
-  &:hover {
-    text-decoration: none;
-    background-color: var(--sdds-grey-100);
-  }
 }
 
 .sdds-nav__app-launcher-link {
