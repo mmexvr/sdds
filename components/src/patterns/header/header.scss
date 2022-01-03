@@ -277,6 +277,8 @@ html {
   list-style-type: none;
   position: absolute;
   right: 0;
+  transition: transform 150ms ease;
+  transform: scaleY(0);
 }
 
 .sdds-nav__avatar-item {
@@ -350,6 +352,10 @@ html {
 .sdds-nav__avatar--opened {
   .sdds-nav__avatar-btn {
     background-color: var(--sdds-white);
+  }
+
+  .sdds-nav__avatar-menu {
+    transform: scaleY(1);
   }
 }
 
