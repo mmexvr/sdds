@@ -159,10 +159,10 @@ html {
 
 .sdds-nav_dropdown-icon {
   margin-left: var(--#{$prefix}-spacing-element-12);
-  transition: transform 0.2s ease-out;
-  transform: rotate(0);
 
   svg {
+    transition: transform 200ms ease-out;
+    transform: rotate(0);
     width: 16px;
     height: auto;
   }
@@ -174,7 +174,20 @@ html {
 
 .sdds-nav__dropdown--opened {
   // Check if this is needed - is it on Hover or On Click?
-  //background-color: var(--sdds-white);
+  .sdds-nav__link {
+    background-color: var(--sdds-white);
+    color: var(--sdds-grey-958);
+
+    .sdds-nav_dropdown-icon {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .sdds-nav__dropdown-menu {
+    transform: scaleY(1);
+  }
 }
 
 .sdds-nav__dropdown-menu {
@@ -183,12 +196,6 @@ html {
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 150ms ease;
-}
-
-.sdds-nav__dropdown:hover {
-  .sdds-nav__dropdown-menu {
-    transform: scaleY(1);
-  }
 }
 
 .sdds-nav__dropdown-item {
@@ -248,6 +255,59 @@ html {
     width: 34px;
     height: 34px;
     border-radius: 50%;
+  }
+}
+
+.sdds-nav__app-launcher-menu {
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+}
+
+.sdds-nav__app-launcher-item {
+  width: 320px;
+  height: 64px;
+  border-bottom: 1px solid var(--sdds-grey-300);
+}
+
+.sdds-nav__app-launcher-item--category {
+  height: 48px;
+}
+
+.sdds-nav__app-launcher-category-title {
+  @include type-style('detail-06');
+
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 16px;
+  background-color: var(--sdds-white);
+  color: var(--sdds-grey-500);
+  transition: background-color 150ms ease;
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--sdds-grey-100);
+  }
+}
+
+.sdds-nav__app-launcher-link {
+  @include type-style('detail-02');
+
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--sdds-white);
+  color: var(--sdds-grey-700);
+  transition: background-color 150ms ease;
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--sdds-grey-100);
   }
 }
 
