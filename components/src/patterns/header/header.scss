@@ -48,6 +48,7 @@ html {
 }
 
 @mixin sdds-nav__basic-element-style {
+  cursor: pointer;
   background-color: var(--sdds-blue-800);
   transition: background-color 150ms ease;
 
@@ -257,17 +258,98 @@ html {
   }
 }
 
-.sdds-nav_avatar {
+.sdds-nav__avatar-btn {
   @include sdds-nav__basic-element-style;
   @include sdds-flex-center;
 
   height: 100%;
   width: 64px;
+  border: none;
 
   img {
     width: 34px;
     height: 34px;
     border-radius: 50%;
+  }
+}
+
+.sdds-nav__avatar-menu {
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+}
+
+.sdds-nav__avatar-item {
+  width: 320px;
+  height: 64px;
+  background-color: var(--sdds-white);
+  border-bottom: 1px solid var(--sdds-grey-300);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+  //WHY WE NEED DOUBLE VALUES HERE TO MAKE IT WORK???
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+
+    .sdds-nav__avatar-link {
+      border-radius: 0 0 4px 4px;
+    }
+  }
+}
+
+.sdds-nav__avatar-item--large {
+  height: 84px;
+}
+
+.sdds-nav__avatar-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.sdds-nav__avatar-title,
+.sdds-nav__avatar-subtitle {
+  @include type-style('headline-07');
+
+  width: 100%;
+}
+
+.sdds-nav__avatar-subtitle {
+  padding-top: 4px;
+  color: var(--sdds-grey-500);
+}
+
+.sdds-nav__avatar-link {
+  @include type-style('detail-02');
+
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--sdds-white);
+  color: var(--sdds-grey-700);
+  transition: background-color 150ms ease;
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--sdds-grey-100);
+  }
+}
+
+.sdds-nav__avatar-item--active {
+  border-left: 4px solid var(--sdds-blue-400);
+
+  .sdds-nav__avatar-link {
+    padding: 0 16px 0 12px;
+  }
+}
+
+.sdds-nav__avatar--opened {
+  .sdds-nav__avatar-btn {
+    background-color: var(--sdds-white);
   }
 }
 
