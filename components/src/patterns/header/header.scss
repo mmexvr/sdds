@@ -44,7 +44,7 @@ html {
 }
 
 * :focus {
-  outline: 1px solid red;
+  outline: 1px solid var(--sdds-blue-400);
 }
 
 @mixin sdds-nav__basic-element-style {
@@ -68,13 +68,22 @@ html {
   height: var(--sdds-header-height);
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .#{$prefix}-nav__inline-menu,
 .#{$prefix}-nav__toolbar-menu {
   display: flex;
+}
+
+.sdds-nav__left,
+.sdds-nav__center,
+.sdds-nav__right {
+  display: flex;
+}
+
+.sdds-nav__center {
+  width: 100%;
+  justify-content: space-between;
 }
 
 .#{$prefix}-nav__app-name {
@@ -84,6 +93,7 @@ html {
   font-weight: normal;
   color: var(--sdds-header-text-colour);
   padding: 0 24px;
+  white-space: nowrap;
 }
 
 .#{$prefix}-nav__app-logo {
@@ -235,6 +245,14 @@ html {
   align-items: center;
   padding: 0 24px;
   color: var(--sdds-grey-800);
+}
+
+.sdds-nav__toolbar-menu {
+  .sdds-nav__item {
+    &:last-child {
+      border-right: none;
+    }
+  }
 }
 
 .sdds-nav__app-launcher-btn {
@@ -432,6 +450,38 @@ html {
 
   .sdds-nav__app-launcher-link {
     padding: 0 16px 0 12px;
+  }
+}
+
+//MOBILE VIEW
+
+@media all and (max-width: $grid-lg) {
+  .sdds-nav {
+    justify-content: space-between;
+  }
+
+  .sdds-nav__center {
+    top: 64px;
+    width: 272px;
+    display: block;
+    position: absolute;
+
+    .#{$prefix}-nav__inline-menu,
+    .#{$prefix}-nav__toolbar-menu {
+      display: block;
+    }
+
+    .sdds-nav__item,
+    .sdds-nav__link,
+    .sdds-nav__avatar-btn {
+      display: block;
+      width: 100%;
+    }
+
+    .sdds-nav__item {
+      border: none;
+      height: 68px;
+    }
   }
 }
 
