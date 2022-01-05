@@ -474,13 +474,38 @@ html {
     .sdds-nav__item,
     .sdds-nav__link,
     .sdds-nav__avatar-btn {
-      display: block;
       width: 100%;
     }
 
     .sdds-nav__item {
       border: none;
       height: 68px;
+    }
+
+    .sdds-nav__dropdown {
+      .sdds-nav__link {
+        height: 68px;
+      }
+
+      .sdds-nav__dropdown-menu {
+        display: block;
+        position: relative;
+
+        .sdds-nav__dropdown-item {
+          width: 100%;
+        }
+      }
+    }
+
+    .sdds-nav__dropdown--opened {
+      height: fit-content;
+    }
+
+    .sdds-nav__avatar {
+      .sdds-nav__avatar-menu,
+      .sdds-nav__avatar-item {
+        width: 100%;
+      }
     }
   }
 }

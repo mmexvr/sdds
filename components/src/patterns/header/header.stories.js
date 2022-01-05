@@ -37,7 +37,7 @@ Basic.args = {
 const Template = ({
   siteName,
   openMenuMobile = false,
-  openInlineDropdown = false,
+  openInlineDropdown = true,
   openAppLauncher = false,
   openAvatarMenu = false,
 }) => {
@@ -265,7 +265,7 @@ const toolbarMenuHTML = `
 export const NavMenu = Template.bind({});
 NavMenu.args = {
   siteName: 'My Application',
-  openInlineDropdown: false,
+  openInlineDropdown: true,
   openAppLauncher: false,
   openAvatarMenu: false,
 };
