@@ -77,11 +77,19 @@ const Template = ({
           </li> 
           
           <li class='sdds-nav__item sdds-nav__item--active'>
-            <a class='sdds-nav__link ' href='#'>Item 2</a>
+            <a class='sdds-nav__link ' href='#'>
+                <span class='sdds-nav__link-icon sdds-nav__link-icon--text'>
+                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
+                </span>
+              Item 2
+            </a>
           </li>
           
           <li class='sdds-nav__item sdds-nav__dropdown ${InlineDropdownActiveClass}'>  
-              <button class='sdds-nav__link'> 
+              <button class='sdds-nav__link'>
+                <span class='sdds-nav__link-icon sdds-nav__link-icon--text'>
+                  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
+              </span> 
                   Item 3 
                   <span class='sdds-nav_dropdown-icon'>
                       <svg viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -99,15 +107,20 @@ const Template = ({
     <ul class='sdds-nav__toolbar-menu'>    
       <li class='sdds-nav__item'>
             <a class='sdds-nav__link' href='#'> 
-            <span class='sdds-nav__link-icon'>
+            <span class='sdds-nav__link-icon sdds-nav__link-icon--text'>
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' style='enable-background:new 0 0 256 256' xml:space='preserve'><path style='fill:currentColor' d='M236.67 107.34 128.96 36.52l-.03-.04-.01.01h-.01l-108.64 71 5.47 8.36 14.93-9.75v113.23h67v-60.66H150v60.66h67V106.37l14.18 9.33 5.5-8.36zm-29.67 102h-47v-60.67H97.67v60.66h-47V99.67h-.16l78.39-51.22L207 99.8v109.53z'/></svg>
-            </span>           
+            </span>
+            Test 1                      
         </a>
       </li> 
       
       <li class='sdds-nav__item sdds-nav__avatar ${AvatarMenuActiveClass}'>
         <button class='sdds-nav__avatar-btn'>
           <img src='https://www.svgrepo.com/show/170303/avatar.svg' alt='profile photo'/>  
+          <div class='sdds-nav__avatar-info sdds-nav__avatar-info--mobile'>
+                <p class='sdds-nav__avatar-title'>Employee Name</p>
+                <p class='sdds-nav__avatar-subtitle'>Company Name</p>             
+            </div> 
         </button>   
         
         <ul class='sdds-nav__avatar-menu'>
