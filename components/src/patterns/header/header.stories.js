@@ -13,33 +13,12 @@ export default {
   },
 };
 
-const BasicTemplate = ({ siteName }) => `
-  <sdds-theme></sdds-theme>
-
-  <nav class='sdds-nav'>
-    <div class='sdds-nav__inline-menu'>
-        <div class='sdds-nav__app-name'>${siteName}</div>
-    </div>
-    <div class='sdds-nav__toolbar-menu'>
-       <a href='#' class='sdds-nav__app-logo'></a>
-    </div>   
-  </nav>`;
-
-export const Basic = BasicTemplate.bind({});
-Basic.args = {
-  siteName: 'My Application',
-  openMenuMobile: false,
-  openInlineDropdown: false,
-  openAppLauncher: false,
-  openAvatarMenu: false,
-};
-
 const Template = ({
   siteName,
-  openMenuMobile = false,
   openInlineDropdown = true,
   openAppLauncher = false,
   openAvatarMenu = false,
+  openMobileMenu = false,
 }) => {
   const InlineDropdownActiveClass = openInlineDropdown
     ? 'sdds-nav__dropdown--opened'
@@ -53,17 +32,21 @@ const Template = ({
     ? 'sdds-nav__avatar--opened'
     : '';
 
+  const MobileMenuActiveClass = openMobileMenu
+    ? 'sdds_nav--mob-menu-active'
+    : '';
+
   return `
   <sdds-theme></sdds-theme>
 
-  <nav class='sdds-nav'>     
+  <nav class='sdds-nav  ${MobileMenuActiveClass}'>     
   
     <div class='sdds-nav__left'>
-      <button class='sdds-nav__item sdds_nav__mob-menu-btn'>
-       <div id='nav-icon4'>
-          <span></span>
-          <span></span>
-          <span></span>
+      <button class='sdds_nav__mob-menu-btn'>
+       <div id='sdds-nav__mob-menu-icon'>
+          <span class='sdds-nav__mob-menu-icon-line' id='sdds-nav__mob-menu-icon-line-1'></span>
+          <span class='sdds-nav__mob-menu-icon-line' id='sdds-nav__mob-menu-icon-line-2'></span>
+          <span class='sdds-nav__mob-menu-icon-line' id='sdds-nav__mob-menu-icon-line-3'></span>
         </div>
       </button>
       <div class='sdds-nav__app-name'>${siteName}</div>
@@ -209,100 +192,11 @@ const Template = ({
   `;
 };
 
-const navMenuHTML = `
-<ul class='sdds-navbar-menu-list'>
-  <li class='sdds-navbar-menu-item active'>
-    <a class='sdds-navbar-menu-item-link' href='#'> 
-      <span class='sdds-navbar-icon-button'><svg width='20' height='20' viewBox='0 0 20 20' fill='currentColor' xmlns='http://www.w3.org/2000/svg'><rect y='0.334473' width='20' height='20'/> </svg></span>
-      Item 1 
-    </a>
-  </li>
-  <li class='sdds-navbar-menu-item'>
-    <a class='sdds-navbar-menu-item-link' href='#'> Item 2 </a>
-  </li>
-  <li class='sdds-navbar-menu-item-dropdown opened'>
-    <a class='sdds-navbar-menu-item-link' href='#'> 
-      Item 3 
-      <span class='sdds-icon-arrow'></span>
-    </a>
-    <ul class='sdds-navbar-menu__dropdown-menu'>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Sub item 3 long label...</a></li>
-      <li class='sdds-navbar-menu__dropdown-item active'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Sub item 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Sub item 3 long label...</a></li>
-    </ul>
-  </li>
-  <li class='sdds-navbar-menu-item'>
-    <a class='sdds-navbar-menu-item-link' href='#'> Item 4 </a>
-  </li>
-</ul>
-`;
-
-const toolbarMenuMobileHTML = `
-<div class='sdds-navbar-menu-toolbar-mobile'>
-  <ul class='sdds-navbar-menu-list'>
-    <li class='sdds-navbar-menu-item'>
-      <a class='sdds-navbar-menu-item-link' href='#'>Toolbar link</a>
-    </li>
-    <li class='sdds-navbar-menu-item-dropdown'>
-      <a class='sdds-navbar-menu-item-link' href='#'>EN <span class='sdds-icon-arrow'></span></a>
-      <ul class='sdds-navbar-menu__dropdown-menu'>
-      <li class='sdds-navbar-menu__dropdown-item sdds-navbar-menu-item-description'>Select language</li>
-        <li class='sdds-navbar-menu__dropdown-item active'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>English</a></li>
-        <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Finnish</a></li>
-        <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>France</a></li>
-        <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Swedish</a></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-`;
-
-const toolbarMenuHTML = `
-<div class='sdds-navbar-menu-toolbar'>
-  <div class='sdds-navbar-menu-item-dropdown opened'>
-    <a class='sdds-navbar-menu-item-link' href='#'><span class='sdds-icon-applauncher'></span></a>
-    <ul class='sdds-navbar-menu__dropdown-menu'>
-      <li class='sdds-navbar-menu__dropdown-item sdds-navbar-menu-item-description'>Category name</li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 1</a></li>
-      <li class='sdds-navbar-menu__dropdown-item active'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 2</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-      <li class='sdds-navbar-menu__dropdown-item'><a class='sdds-navbar-menu__dropdown-item-link' href='#'>Application name 3</a></li>
-    </ul>
-  </div>
-</div>
-`;
-
-export const NavMenu = Template.bind({});
-NavMenu.args = {
+export const Default = Template.bind({});
+Default.args = {
   siteName: 'My Application',
   openInlineDropdown: true,
   openAppLauncher: false,
   openAvatarMenu: false,
-};
-
-export const toolbarMenu = Template.bind({});
-toolbarMenu.args = {
-  siteName: 'My Application',
-  openMenuMobile: false,
-  toolbarMenuMobile: toolbarMenuMobileHTML,
-  toolbarMenu: toolbarMenuHTML,
-};
-
-export const AllMenu = Template.bind({});
-AllMenu.args = {
-  siteName: 'My Application',
-  openMenuMobile: false,
-  navMenu: navMenuHTML,
-  toolbarMenuMobile: toolbarMenuMobileHTML,
-  toolbarMenu: toolbarMenuHTML,
+  openMobileMenu: false,
 };
